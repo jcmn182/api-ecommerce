@@ -20,7 +20,7 @@ sequelize
   .catch((err) => console.log(err));
 
 // Spin up server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Express app running on port: ${PORT}`);
 });
